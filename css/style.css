@@ -138,6 +138,7 @@ input[type="radio"] {
     border-right: 1px solid black;
     border-block-end-style: solid;
     border-block-start-style: none;
+    border-bottom: none;
   }
   .navbar:last-child {
     border-right: none;
