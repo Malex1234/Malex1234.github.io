@@ -1,0 +1,151 @@
+body {
+  background-color: lightcyan;
+}
+
+hgroup {
+  text-align: center;
+}
+
+.gottem {
+  border: 5px solid black;
+  padding: 5px;
+  display: none;
+}
+
+.example:hover + .gottem {
+  display: block;
+  block-size: 250px;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: teal;
+  overflow: hidden;
+}
+
+.navbar {
+  float: none;
+  border-right: none;
+  border-block-end-style: none;
+  border-block-start-style: none;
+  border-left: none;
+  border-top: none;
+  border-bottom: black solid 5px;
+}
+
+.navbar:last-child {
+  border-bottom: none;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  color: white;
+  text-decoration-color: none;
+  text-decoration: underline;
+  padding: 5px;
+}
+
+li a:active {
+  background: green;
+}
+
+div.navtest {
+  position: fixed;
+  top: 0;
+  width: 20%;
+  height: 5%;
+}
+
+img {
+  max-height: 400px;
+  max-width: 400px;
+  filter: grayscale(100%);
+}
+img:hover {
+  filter: grayscale(0%);
+}
+
+.Green:hover {
+  background: green;
+}
+
+.Yellow:hover {
+  background: yellow;
+}
+
+.Brown:hover {
+  background: brown;
+}
+
+@keyframes example {
+  from {
+    background-color: lightcyan;
+  }
+  to {
+    background-color: orange;
+  }
+}
+
+.cat {
+  background-color: orange;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  border-top-style: dotted;
+  border-top-color: yellow;
+  border-bottom-style: groove;
+  border-bottom-color: darkorange;
+  border-width: thick;
+}
+
+.games {
+  background: slateblue;
+  transition: width 5s, background 6s;
+  transition-delay: 1s;
+  box-shadow: 10px 10px slategray;
+  border-block-style: solid;
+  border-block-color: blue;
+  border-bottom-left-radius: 20px 20px;
+  border-bottom-right-radius: 20px 20px;
+  border-top-right-radius: 20px 20px;
+  border-top-left-radius: 20px 20px;
+  border-top-color: red;
+}
+
+input[type="radio"] {
+  accent-color: green;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background: gray;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: lightcoral;
+  }
+  .navbar {
+    float: left;
+    border-right: 1px solid black;
+    border-block-end-style: solid;
+    border-block-start-style: none;
+  }
+  .navbar:last-child {
+    border-right: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background: lightyellow;
+  }
+}
