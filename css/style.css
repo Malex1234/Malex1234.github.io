@@ -47,7 +47,7 @@ li a {
   display: block;
   text-align: center;
   color: white;
-  text-decoration-color: none;
+  text-decoration-color: white;
   text-decoration: underline;
   padding: 5px;
 }
