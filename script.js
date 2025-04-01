@@ -10,6 +10,7 @@ async function fetchMarketData(itemName) {
       console.log("✅ Received data:", data); // Debugging log
 
       // Ensure elements exist before updating them
+      const lowestPriceElement = document.getElementById("market-lowest");
       const priceElement = document.getElementById("market-price");
       const volumeElement = document.getElementById("market-volume");
 
