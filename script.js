@@ -1,22 +1,25 @@
-const backendURL = "https://malex1234-github-io.onrender.com/steam-market?item=AK-47 | Redline (Field-Tested)";
+const backendURL = "https://malex1234-github-io.onrender.com/steam-market";
 
-async function fetchMarketData() {
+async function fetchMarketData(itemName) {
     try {
-        let response = await fetch(backendURL);
-        let data = await response.json();
-        if (data.success) {
-            document.getElementById("market-items").innerHTML = `
-                <li>Item: AK-47 | Redline (Field-Tested)</li>
-                <li>Lowest Price: ${data.lowest_price}</li>
-                <li>Median Price: ${data.median_price}</li>
-            `;
-        } else {
-            console.error("Failed to fetch data");
+        const response = await fetch(`${backendURL}?item=${encodeURIComponent(itemName)}`);
+        if (!response.ok) {
+            throw new Error("Failed to fetch data from backend");
         }
+        const data = await response.json();
+        console.log("✅ Received data:", data); // Debugging log
+
+        // Display data on the webpage
+        document.getElementById("market-price").innerText = `Median Price: ${data.median_price}`;
+        document.getElementById("market-volume").innerText = `Volume: ${data.volume}`;
     } catch (error) {
-        console.error("Error fetching Steam Market data:", error);
+        console.error("❌ Error fetching market data:", error);
+        document.getElementById("market-price").innerText = "Error fetching price.";
+        document.getElementById("market-volume").innerText = "";
     }
 }
 
-fetchMarketData();
+// Example usage
+fetchMarketData("AK-47 | Redline (Field-Tested)");
+
 
