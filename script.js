@@ -27,4 +27,3 @@ async function fetchMarketData(itemName) {
 // Example usage
 fetchMarketData("AK-47 | Redline (Field-Tested)");
 
-
