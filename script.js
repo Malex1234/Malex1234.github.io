@@ -14,7 +14,8 @@ async function fetchMarketData(itemName) {
       const priceElement = document.getElementById("market-price");
       const volumeElement = document.getElementById("market-volume");
 
-      if (priceElement && volumeElement) {
+      if (priceElement && volumeElement && lowestPriceElement) {
+          lowestPriceElement.innerText = `Lowest Price: ${data.lowest_price}`;
           priceElement.innerText = `Median Price: ${data.median_price}`;
           volumeElement.innerText = `Volume: ${data.volume}`;
       } else {
